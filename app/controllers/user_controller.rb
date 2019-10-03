@@ -3,7 +3,7 @@ class UserController < ApplicationController
   # Signing up
 
   get "/signup" do
-    erb :signup
+    erb :'users/signup'
   end
 
   post "/signup" do
@@ -18,5 +18,19 @@ class UserController < ApplicationController
   end
 
   # Logging in
+
+  get '/login' do
+    erb :'users/login'
+  end
+
+  post '/login' do
+    user = User.find_by(:username => params[:username])
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id
+      redirect "/" #fix this later to redirect to Pokémon
+    else
+      redirect "/login" #fix later to give error message
+    end
+  end
 
 end
