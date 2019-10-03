@@ -1,3 +1,3 @@
 class User
-  # has_many :pokemon
+  has_many :pokemon
 end
