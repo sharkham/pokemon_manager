@@ -12,6 +12,7 @@ class UserController < ApplicationController
       #find that thing that validates the things.
       #redirect to user being logged in
       redirect '/'
+      #currently successful
     else
       redirect "/signup"
       #one example redirects to failure; it would be better to go to sign-up again but with an error
