@@ -30,6 +30,7 @@ class UserController < ApplicationController
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
       redirect "/" #fix this later to redirect to Pokémon
+      #currently works
     else
       redirect "/login" #fix later to give error message
     end
