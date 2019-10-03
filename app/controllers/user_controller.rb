@@ -11,6 +11,7 @@ class UserController < ApplicationController
     if user.save
       #find that thing that validates the things.
       #redirect to user being logged in
+      redirect '/'
     else
       redirect "/signup"
       #one example redirects to failure; it would be better to go to sign-up again but with an error
