@@ -36,4 +36,11 @@ class UserController < ApplicationController
     end
   end
 
+  #Logout
+
+  get '/logout' do
+    session.clear
+    redirect '/'
+  end
+
 end
