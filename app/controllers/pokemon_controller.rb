@@ -37,6 +37,13 @@ class PokemonController < ApplicationController
   end
 
   #Create
+  get '/pokemon/new' do
+    if logged_in?
+      erb :'pokemon/new'
+    else
+      redirect '/login'
+    end
+  end
 
   #Read
 
