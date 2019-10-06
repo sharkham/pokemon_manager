@@ -8,5 +8,10 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
+# Inflector.inflections do |inflect|
+#   inflect.uncountable [pokemon]
+#  end
+#this method only works for rails
+
 require './app/controllers/application_controller'
 require_all 'app'
