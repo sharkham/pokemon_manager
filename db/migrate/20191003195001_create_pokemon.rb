@@ -5,6 +5,7 @@ class CreatePokemon < ActiveRecord::Migration
       t.string :nickname
       t.string :type
       t.integer :number
+      t.integer :user_id
       t.timestamps
     end
   end

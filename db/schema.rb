@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20191003195001) do
     t.string   "nickname"
     t.string   "type"
     t.integer  "number"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
