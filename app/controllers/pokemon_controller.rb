@@ -24,6 +24,7 @@ class PokemonController < ApplicationController
       erb :'pokemon/index'
     else
       redirect '/login'
+    end
   end
 
   #All Pokémon
