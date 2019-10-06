@@ -27,6 +27,14 @@ class PokemonController < ApplicationController
   end
 
   #All Pokémon
+  get '/pokemon/all' do
+    if logged_in?
+      @pokemon = Pokemon.all
+      erb :'pokemon/index'
+    else
+      redirect '/login'
+    end
+  end
 
   #Create
 
