@@ -1,15 +1,32 @@
 class PokemonController < ApplicationController
 
-  #Index
-  get ':slug/pokemon' do
+  #Any user's Pokémon
+  get '/pokemon/:slug' do
     if logged_in?
       @user = User.find_by_slug(params[:slug])
-      @pokemon = @user.pokemon
-      erb :'pokemon/index' #or should it be users/show?
+      if @user == current_user
+        redirect '/pokemon'
+      else
+        @pokemon = @user.pokemon
+        erb :'pokemon/index' #or should it be users/show?
+      end
     else
       redirect '/login'
     end
   end
+
+  #Logged-in user's Pokémon
+  get '/pokemon' do
+    if logged_in?
+      @user = current_user
+      @posts = current_user.posts
+
+      erb :'pokemon/index'
+    else
+      redirect '/login'
+  end
+
+  #All Pokémon
 
   #Create
 
