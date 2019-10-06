@@ -1,20 +1,20 @@
 ApplicationController
   Homepage
-- [ ] loads the homepage
+- [X] loads the homepage
   Signup Page
-- [ ] loads the signup page
-- [ ] signup directs user to twitter index
-- [ ] does not let a user sign up without a username
-- [ ] does not let a user sign up without an email
-- [ ] does not let a user sign up without a password
-- [ ] does not let a logged in user view the signup page
+- [X] loads the signup page
+- [X] signup directs user to twitter index
+- [X] does not let a user sign up without a username
+- [X] does not let a user sign up without an email
+- [X] does not let a user sign up without a password
+- [X] does not let a logged in user view the signup page
   login
-- [ ] loads the login page
+- [X] loads the login page
 - [ ] loads the tweets index after login
-- [ ] does not let user view login page if already logged in
+- [X] does not let user view login page if already logged in
   logout
-- [ ] lets a user logout if they are already logged in and redirects to the login page
-- [ ] redirects a user to the index page if the user tries to access /logout while not logged in
+- [X] lets a user logout if they are already logged in and redirects to the HOME(login) page
+- [X] redirects a user to the index page if the user tries to access /logout while not logged in
 - [ ] redirects a user to the login route if a user tries to access /tweets route if user not logged in
 - [ ] loads /tweets if user is logged in
   user show page
