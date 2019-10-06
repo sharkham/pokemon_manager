@@ -3,7 +3,7 @@ class CreatePokemon < ActiveRecord::Migration
     create_table :pokemon do |t|
       t.string :species
       t.string :nickname
-      t.string :type
+      t.string :pokemon_type
       t.integer :number
       t.integer :user_id
       t.timestamps
