@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :pokemon
+  has_many :pokemons
 
   has_secure_password
   validates :username, :email, presence: true

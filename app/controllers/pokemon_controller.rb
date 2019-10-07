@@ -17,7 +17,7 @@ class PokemonController < ApplicationController
       if @user == current_user
         redirect '/pokemon'
       else
-        @pokemon = @user.pokemon
+        @pokemon = @user.pokemons
         erb :'pokemon/index' #or should it be users/show?
       end
     else
@@ -29,7 +29,7 @@ class PokemonController < ApplicationController
   get '/pokemon' do
     if logged_in?
       @user = current_user
-      @pokemon = current_user.pokemon
+      @pokemon = @user.pokemons
 
       erb :'pokemon/index'
     else

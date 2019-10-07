@@ -16,6 +16,10 @@ Pokemon.create(species: "Mew", nickname: nil, pokemon_type: "Psychic", number: 1
 Pokemon.create(species: "Mewtwo", nickname: "Clone", pokemon_type: "Psychic", number: 150, user: chewie)
 Pokemon.create(species: "Chikorita", nickname: "Streep", pokemon_type: "Grass", number: 152, user: meryl)
 
+libris.save!
+meryl.save!
+chewie.save!
+
 # t.string   "species"
 # t.string   "nickname"
 # t.string   "type"
