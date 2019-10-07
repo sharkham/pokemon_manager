@@ -1,5 +1,15 @@
 class PokemonController < ApplicationController
 
+  #All Pokémon
+  get '/pokemon/all' do
+    if logged_in?
+      @pokemon = Pokemon.all
+      erb :'pokemon/index'
+    else
+      redirect '/login'
+    end
+  end
+
   #Any user's Pokémon
   get '/pokemon/:slug' do
     if logged_in?
@@ -27,15 +37,7 @@ class PokemonController < ApplicationController
     end
   end
 
-  #All Pokémon
-  get '/pokemon/all' do
-    if logged_in?
-      @pokemon = Pokemon.all
-      erb :'pokemon/index'
-    else
-      redirect '/login'
-    end
-  end
+
 
   #Create
   get '/pokemon/new' do
