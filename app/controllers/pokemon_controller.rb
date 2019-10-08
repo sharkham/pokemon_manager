@@ -4,6 +4,7 @@ class PokemonController < ApplicationController
   get '/pokemon' do
     if logged_in?
       @pokemon = Pokemon.all
+      @user = current_user
       erb :'pokemon/index'
     else
       redirect '/login'
@@ -13,6 +14,7 @@ class PokemonController < ApplicationController
   #Create
   get '/pokemon/new' do
     if logged_in?
+      @user = current_user
       erb :'pokemon/new'
     else
       redirect '/login'
@@ -44,6 +46,7 @@ class PokemonController < ApplicationController
   get '/pokemon/:id' do
     @pokemon = Pokemon.find_by_id(params[:id])
     if @pokemon
+      @user = current_user
       erb :'pokemon/show'
     else
       redirect '/pokemon'
@@ -53,8 +56,9 @@ class PokemonController < ApplicationController
 
   #Edit
   get '/pokemon/:id/edit' do
+    @user = current_user
     pokemon_user = Pokemon.find_by_id(params[:id]).user
-    if pokemon_user.id == current_user.id
+    if pokemon_user.id == @user.id
       @pokemon = Pokemon.find_by_id(params[:id])
       erb :'pokemon/edit'
     else
