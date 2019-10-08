@@ -1,6 +1,7 @@
 ENV['SINATRA_ENV'] ||= "development"
 
 require 'bundler/setup'
+require 'rack-flash'
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 ActiveRecord::Base.establish_connection(
@@ -12,7 +13,6 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.uncountable %w( pokemon )
   # inflect.uncountable [pokemon]
  end
-#this method only works for rails
 
 require './app/controllers/application_controller'
 require_all 'app'

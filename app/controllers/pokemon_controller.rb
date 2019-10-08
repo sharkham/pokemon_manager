@@ -55,7 +55,7 @@ class PokemonController < ApplicationController
         @pokemon = Pokemon.find_by_id(params[:id])
         erb :'pokemon/edit'
       else
-        #this is where the flash[:err] should go
+        flash[:err] = "You can't edit someone else's Pokémon."
         redirect "/pokemon"
       end
     else

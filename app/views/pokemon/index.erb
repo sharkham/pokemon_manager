@@ -1,3 +1,7 @@
+<% if flash.has?(:err) %>
+    <h3 style="color: red;"><%= flash[:err] %></h3>
+<% end %>
+
 <h1>Pokémon</h1>
 <h2>Look at other trainer's Pokémon!</h2>
 <% @pokemon.each do |p| %>
