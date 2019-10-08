@@ -3,6 +3,7 @@ Pokémon App
 [] need error handling
 [] add all the links
 [] there is currently a line break only after h2 and I need it even if there's no h2
+[] find a new h2 for Pokémon index
 
 - should logged in users be able to view Pokémon?
 - need to lock numbers and types into species
