@@ -10,7 +10,7 @@ ApplicationController
 - [X] does not let a logged in user view the signup page
   login
 - [X] loads the login page
-- [ ] loads the tweets index after login
+- [x] loads the HOME (tweets index) after login
 - [X] does not let user view login page if already logged in
   logout
 - [X] lets a user logout if they are already logged in and redirects to the HOME(login) page
@@ -44,7 +44,7 @@ index action
   - [x] lets a user edit their own tweet if they are logged in
   - [x] does not let a user edit a text with blank content
   logged out
-  - [ ] does not load -- requests user to login
+  - [x] does not load -- requests user to login
   delete action
     logged in
   - [x] lets a user delete their own tweet if they are logged in
