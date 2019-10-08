@@ -104,5 +104,15 @@ class PokemonController < ApplicationController
   end
 
   #Destroy
+  delete '/pokemon/:id' do
+    pokemon_user = Pokemon.find_by_id(params[:id]).user
+    if pokemon_user.id == current_user.id
+      Pokemon.destroy(params[:id])
+      redirect :'/pokemon'
+    else
+      #flash error thing
+      redirect :'/pokemon'
+    end
+  end
 
 end
