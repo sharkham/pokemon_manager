@@ -86,7 +86,22 @@ class PokemonController < ApplicationController
   end
 
   #Update
-
+  patch '/pokemon/:id' do
+    pokemon_user = Pokemon.find_by_id(params[:id]).user
+    if pokemon_user.id == current_user.id
+      @pokemon = Pokemon.find_by_id(params[:id])
+      params.delete("_method")
+      # ^ask what this means
+      if @pokemon.update(params)
+        redirect "/pokemon/#{@pokemon.id}"
+      else
+        redirect "/pokemon/#{@pokemon.id}/edit"
+      end
+    else
+      #place for the flash error thing
+      erb :"/pokemon/index"
+    end
+  end
 
   #Destroy
 
