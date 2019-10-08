@@ -1,0 +1,18 @@
+<h1>Create a new Pokémon!</h1>
+<form method="POST" action="/pokemon">
+    <label for="species">Species</label>
+    <input type="text" name="species" value="<%= @pokemon ? @pokemon.species : ""%> ">
+
+    <label for="number">Number</label>
+    <input type="text" name="number" value="<%= @pokemon ? @pokemon.number : ""%> ">
+
+    <label for="nickname">Nickname</label>
+    <input type="text" name="nickname" value="<%= @pokemon ? @pokemon.nickname : ""%> ">
+
+    <label for="pokemon_type">Type</label>
+    <input type="text" name="pokemon_type" value="<%= @pokemon ? @pokemon.pokemon_type : ""%> ">
+
+    <input type="submit">
+</form>
+
+

@@ -1,5 +1,5 @@
 class Pokemon < ActiveRecord::Base
   belongs_to :user
 
-  # self.table_name = "pokemon"
+  self.table_name = "pokemon"
 end

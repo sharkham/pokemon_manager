@@ -1,0 +1,5 @@
+<h1><%= @pokemon.species %></h1>
+<h2>"<%= @pokemon.nickname %>"</h2>
+<p>Number: <%= @pokemon.number %></p>
+<p>Type: <%= @pokemon.pokemon_type %></p>
+<p>Trainer: <a href="/pokemon/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
