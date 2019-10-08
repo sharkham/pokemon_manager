@@ -1,7 +1,7 @@
 Pokémon App
 [X] need different view for a user's Pokémon that is user/something and goes in user controller
-[] need error handling
-[x] add all the links
+[X] need error handling
+[X] add all the links
 [] there is currently a line break only after h2 and I need it even if there's no h2
 [] find a new h2 for Pokémon index
 
