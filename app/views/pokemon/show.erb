@@ -1,8 +1,10 @@
 <h1><%= @pokemon.species %></h1>
+<% if @pokemon.nickname != nil && @pokemon.nickname != "" && @pokemon.nickname != " "%>
 <h2>"<%= @pokemon.nickname %>"</h2>
+<% end %>
 <p>Number: <%= @pokemon.number %></p>
 <p>Type: <%= @pokemon.pokemon_type %></p>
-<p>Trainer: <a href="/pokemon/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
+<p>Trainer: <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
 <form method="POST" action="/pokemon/<%= @pokemon.id %>">
   <input type="hidden"  name="_method" value="delete" />
   <input type="submit" value="Delete" />
