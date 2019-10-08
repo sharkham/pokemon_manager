@@ -1,5 +1,4 @@
 <% @pokemon.each do |p| %>
-  <%= p.species %>
-  <%= p.nickname%>
+  <a href="/pokemon/<%= p.id %>"><%= p.species %></a>
   <br><br>
 <% end %>
