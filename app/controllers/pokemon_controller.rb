@@ -1,7 +1,7 @@
 class PokemonController < ApplicationController
 
   #Read - All Pokémon
-  get '/pokemon/all' do
+  get '/pokemon' do
     if logged_in?
       @pokemon = Pokemon.all
       erb :'pokemon/index'
@@ -28,17 +28,17 @@ class PokemonController < ApplicationController
     end
   end
 
-  #Read - Logged-in user's Pokémon
-  get '/pokemon' do
-    if logged_in?
-      @user = current_user
-      @pokemon = @user.pokemon
+  # #Read - Logged-in user's Pokémon
+  # get '/pokemon' do
+  #   if logged_in?
+  #     @user = current_user
+  #     @pokemon = @user.pokemon
 
-      erb :'pokemon/index'
-    else
-      redirect '/login'
-    end
-  end
+  #     erb :'pokemon/index'
+  #   else
+  #     redirect '/login'
+  #   end
+  # end
 
   #Read - Individual Pokémon (show)
   get '/pokemon/:id' do
@@ -65,6 +65,8 @@ class PokemonController < ApplicationController
       # else
         @pokemon = @user.pokemon
         erb :'pokemon/index' #or should it be users/show?
+        #maybe change this to a page that has user's name
+        #and stuff too so it's not the 'pokemon/index' page but a different one.
       # end
     else
       redirect '/login'
