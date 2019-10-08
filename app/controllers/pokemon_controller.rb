@@ -76,7 +76,7 @@ class PokemonController < ApplicationController
         redirect "/pokemon/#{@pokemon.id}/edit"
       end
     else
-      #place for the flash error thing
+      flash[:err] = "You can't edit someone else's Pokémon."
       erb :"/pokemon/index"
     end
   end
@@ -88,7 +88,7 @@ class PokemonController < ApplicationController
       Pokemon.destroy(params[:id])
       redirect :'/pokemon'
     else
-      #flash error thing
+      flash[:err] = "You can't delete someone else's Pokémon."
       redirect :'/pokemon'
     end
   end
