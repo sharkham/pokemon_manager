@@ -64,7 +64,7 @@ class UserController < ApplicationController
     if logged_in?
       @user = User.find_by_slug(params[:slug])
       @pokemon = @user.pokemon
-      erb :'user/show'
+      erb :'users/show'
     else
       redirect '/login'
     end
