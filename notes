@@ -1,7 +1,8 @@
 Pokémon App
-- need different view for a user's Pokémon that is user/something and goes in user controller
-- need error handling
-- add all the links
+[X] need different view for a user's Pokémon that is user/something and goes in user controller
+[] need error handling
+[] add all the links
+[] there is currently a line break only after h2 and I need it even if there's no h2
 
 - should logged in users be able to view Pokémon?
 - need to lock numbers and types into species
