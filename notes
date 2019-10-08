@@ -1,6 +1,8 @@
 Pokémon App
-- should logged in users be able to view Pokémon?
+- need different view for a user's Pokémon that is user/something and goes in user controller
 - need error handling
+- add all the links
+
+- should logged in users be able to view Pokémon?
 - need to lock numbers and types into species
 - might need a "pokemon species" table to let people select from to make this work better
-- need different view for a user's Pokémon that is user/something and goes in user controller
