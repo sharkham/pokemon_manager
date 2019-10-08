@@ -30,40 +30,36 @@ class PokemonController < ApplicationController
     end
   end
 
-  # #Read - Logged-in user's Pokémon
-  # get '/pokemon' do
-  #   if logged_in?
-  #     @user = current_user
-  #     @pokemon = @user.pokemon
-
-  #     erb :'pokemon/index'
-  #   else
-  #     redirect '/login'
-  #   end
-  # end
-
   #Read - Individual Pokémon (show)
   get '/pokemon/:id' do
-    @pokemon = Pokemon.find_by_id(params[:id])
-    if @pokemon
-      @user = current_user
-      erb :'pokemon/show'
+    if logged_in?
+      @pokemon = Pokemon.find_by_id(params[:id])
+      if @pokemon
+        @user = current_user
+        erb :'pokemon/show'
+      else
+        redirect '/pokemon'
+      end
     else
-      redirect '/pokemon'
+      redirect '/login'
     end
   end
 
 
   #Edit
   get '/pokemon/:id/edit' do
-    @user = current_user
-    pokemon_user = Pokemon.find_by_id(params[:id]).user
-    if pokemon_user.id == @user.id
-      @pokemon = Pokemon.find_by_id(params[:id])
-      erb :'pokemon/edit'
+    if logged_in?
+      @user = current_user
+      pokemon_user = Pokemon.find_by_id(params[:id]).user
+      if pokemon_user.id == @user.id
+        @pokemon = Pokemon.find_by_id(params[:id])
+        erb :'pokemon/edit'
+      else
+        #this is where the flash[:err] should go
+        redirect "/pokemon"
+      end
     else
-      #this is where the flash[:err] should go
-      redirect "/pokemon"
+      redirect '/login'
     end
   end
 

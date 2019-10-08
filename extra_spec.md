@@ -15,7 +15,7 @@ ApplicationController
   logout
 - [X] lets a user logout if they are already logged in and redirects to the HOME(login) page
 - [X] redirects a user to the index page if the user tries to access /logout while not logged in
-- [ ] redirects a user to the login route if a user tries to access /tweets route if user not logged in
+- [x] redirects a user to the login route if a user tries to access /tweets route if user not logged in
 - [x] loads /tweets if user is logged in
   user show page
 - [x] shows all a single users tweets
@@ -29,20 +29,20 @@ index action
   - [x] lets user view new tweet form if logged in
   - [x] lets user create a tweet if they are logged in
   - [X] does not let a user tweet from another user (they wouldn't be able to)
-  - [ ] does not let a user create a blank tweet
+  - [x] does not let a user create a blank tweet
   logged out
   - [x] does not let user view new tweet form if not logged in
   show action
     logged in
   - [x] displays a single tweet
   logged out
-  - [ ] does not let a user view a tweet
+  - [x] does not let a user view a tweet
   edit action
     logged in
   - [x] lets a user view tweet edit form if they are logged in
   - [x] does not let a user edit a tweet they did not create
   - [x] lets a user edit their own tweet if they are logged in
-  - [ ] does not let a user edit a text with blank content
+  - [x] does not let a user edit a text with blank content
   logged out
   - [ ] does not load -- requests user to login
   delete action
