@@ -3,7 +3,7 @@
 <p>Number: <%= @pokemon.number %></p>
 <p>Type: <%= @pokemon.pokemon_type %></p>
 <p>Trainer: <a href="/pokemon/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
-<form method="POST" action="/posts/<%= @post.id %>">
+<form method="POST" action="/pokemon/<%= @pokemon.id %>">
   <input type="hidden"  name="_method" value="delete" />
   <input type="submit" value="Delete" />
   </form>
