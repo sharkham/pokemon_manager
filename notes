@@ -2,8 +2,11 @@ Pokémon App
 [X] need different view for a user's Pokémon that is user/something and goes in user controller
 [X] need error handling
 [X] add all the links
+[X] blog post draft
+[] publish blog post
 [] there is currently a line break only after h2 and I need it even if there's no h2
 [] find a new h2 for Pokémon index
+[] make it pretty
 
 - should logged in users be able to view Pokémon?
 - need to lock numbers and types into species

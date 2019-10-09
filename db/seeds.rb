@@ -20,10 +20,27 @@ libris.save!
 meryl.save!
 chewie.save!
 
-# t.string   "species"
-# t.string   "nickname"
-# t.string   "type"
-# t.integer  "number"
-# t.integer  "user_id"
-# t.datetime "created_at"
-# t.datetime "updated_at"
+###
+
+species_list = Scraper.scrape_list_page
+
+species_list.each do |species_name|
+  Species.create(name: species_name)
+end
+
+#this method works in pry. Need to do a thing to
+#exclude duplicate names tho
+Species.all.each_with_index do |species, index|
+  pokemon_name = species.name
+  hash = Scraper.scrape_pokemon_page(pokemon_name)
+  species.description = hash[:description]
+  species.pokemon_type = hash[:type]
+  species.number = hash[:number]
+  species.save
+
+
+  # wait_threshold = 10
+  # if index > wait_threshold && index % wait_threshold == 0
+  #   sleep 20
+  # end
+end
