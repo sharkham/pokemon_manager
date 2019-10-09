@@ -24,6 +24,7 @@ chewie.save!
 
 species_list = Scraper.scrape_list_page
 
+
 species_list.each do |species_name|
   Species.create(name: species_name)
 end

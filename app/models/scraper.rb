@@ -7,6 +7,7 @@ class Scraper
     pokemon_scrape = index_page.css("table#pokedex td.cell-name a.ent-name").collect do |pokemon|
       pokemon.text
     end
+    pokemon_scrape.uniq!
   end
 
   def self.scrape_pokemon_page(name)
