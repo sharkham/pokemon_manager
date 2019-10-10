@@ -2,25 +2,34 @@
 <form method="POST" action="/pokemon/<%= @pokemon.id %>">
     <input type="hidden" id="hidden" name="_method" value="PATCH">
 
-    <label for="species">Species</label>
-    <input type="text" name="species" value="<%= @pokemon.species %>">
+
+<label for="species">Species</label>
+    <select name="species">
+      <% Species.all.each do |species_name| %>
+      <% if species_name == @pokemon.species %>
+        <option selected value="<%= species_name.name %>"><%= species_name.name %></option>
+      <% else %>
+        <option value="<%= species_name.name %>"><%= species_name.name %></option>
+      <% end %>
+      <% end %>
+      </select>
     <br>
     <br>
+
 
     <label for="nickname">Nickname</label>
     <input type="text" name="nickname" value="<%= @pokemon.nickname %>">
     <br>
     <br>
 
-    <label for="number">Number</label>
-    <input type="text" name="number" value="<%= @pokemon.number %>">
+
+
+    <label for="notes">Notes</label><br>
+    <textarea name="notes" value="<%= @pokemon.notes %>"></textarea>
     <br>
     <br>
 
-    <label for="pokemon_type">Type</label>
-    <input type="text" name="pokemon_type" value="<%= @pokemon.pokemon_type %>">
-    <br>
-    <br>
+
 
     <input type="submit">
 </form>
