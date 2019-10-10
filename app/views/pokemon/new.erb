@@ -1,22 +1,24 @@
 <h1>Create a new Pokémon!</h1>
 <form method="POST" action="/pokemon">
     <label for="species">Species</label>
-    <input type="text" name="species" value="<%= @pokemon ? @pokemon.species : ""%>">
+    <select name="species">
+      <% Species.all.each do |species_name| %>
+      <option value="<%= species_name.name %>"><%= species_name.name %></option>
+      <% end %>
+      </select>
     <br>
     <br>
+
 
     <label for="nickname">Nickname</label>
     <input type="text" name="nickname" value="<%= @pokemon ? @pokemon.nickname : ""%>">
     <br>
     <br>
 
-    <label for="number">Number</label>
-    <input type="text" name="number" value="<%= @pokemon ? @pokemon.number : ""%>">
-    <br>
-    <br>
 
-    <label for="pokemon_type">Type</label>
-    <input type="text" name="pokemon_type" value="<%= @pokemon ? @pokemon.pokemon_type : ""%>">
+
+    <label for="notes">Notes</label><br>
+    <textarea name="notes" value="<%= @pokemon ? @pokemon.notes : ""%>"></textarea>
     <br>
     <br>
 
