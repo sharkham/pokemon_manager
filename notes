@@ -4,8 +4,8 @@ Pokémon App
 [X] add all the links
 [X] blog post draft
 [] publish blog post
-[] there is currently a line break only after h2 and I need it even if there's no h2
-[] find a new h2 for Pokémon index
+[x] there is currently a line break only after h2 and I need it even if there's no h2
+[x] find a new h2 for Pokémon index
 [] make it pretty
   [x] add a logo
 [x] add login error handling
