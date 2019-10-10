@@ -13,7 +13,7 @@
 
   /* --- Welcome Page Styles --- */
   body {
-    background-color: lightblue;
+    background-color: rgb(162, 48, 48);
     color: #333;
     font-family: Sans-Serif;
     line-height: 18px;
@@ -80,6 +80,29 @@
     border-top: 2px solid #ccc;
     margin-top: 20px;
     padding-top: 20px;
+  }
+
+  .myButton {
+    background:linear-gradient(to bottom, #f20938 5%, #ad0232 100%);
+    background-color:#f20938;
+    border-radius:18px;
+    border:1px solid #ab1919;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    padding:8px 19px;
+    text-decoration:none;
+    text-shadow:0px 0px 0px #662828;
+  }
+  .myButton:hover {
+    background:linear-gradient(to bottom, #ad0232 5%, #f20938 100%);
+    background-color:#ad0232;
+  }
+  .myButton:active {
+    position:relative;
+    top:1px;
   }
 }
 
