@@ -22,7 +22,10 @@ class PokemonController < ApplicationController
   end
 
   post '/pokemon' do
-    @pokemon = current_user.pokemon.build(params)
+    species = Species.find_by(name: params[:species])
+    params.delete("species")
+    @pokemon = current_user.pokemon.build(species: species)
+    @pokemon.update(params)
     if @pokemon.save
       redirect '/pokemon'
     else
