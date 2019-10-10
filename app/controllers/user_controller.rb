@@ -64,6 +64,7 @@ class UserController < ApplicationController
 
   get '/user/:slug' do
     if logged_in?
+      @size = "small"
       @user = current_user
       @trainer = User.find_by_slug(params[:slug])
       @pokemon = @trainer.pokemon

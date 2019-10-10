@@ -15,7 +15,9 @@
   </head>
   <body>
     <div class="wrapper">
-
+    <% if @size != "large" %>
+    <img src="../images/pokemonlogo2.png" class="img-responsive main-image" width="300">
+    <% end %>
         <%= yield %>
 
     <div class="sidebar">

@@ -14,6 +14,7 @@ class ApplicationController < Sinatra::Base
     if logged_in?
       @user = current_user
     end
+    @size = "large"
     erb :welcome
   end
 
