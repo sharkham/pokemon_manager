@@ -47,34 +47,28 @@ Species.all.each_with_index do |species, index|
 end
 
 
-bulby = Pokemon.create(nickname: "Bulby", user: libris)
 bulbasaur = Species.find_by(name: "Bulbasaur")
-bulby.species = bulbasaur
+bulby = Pokemon.create(nickname: "Bulby", user: libris, species: bulbasaur)
 bulby.save
 
-ivy = Pokemon.create(nickname: "Ivy", user: libris)
 ivysaur = Species.find_by(name: "Ivysaur")
-ivy.species = ivysaur
+ivy = Pokemon.create(nickname: "Ivy", user: libris, species: ivysaur)
 ivy.save
 
-pika = Pokemon.create(nickname: "Pika", user: meryl)
 pikachu = Species.find_by(name: "Pikachu")
-pika.species = pikachu
+pika = Pokemon.create(nickname: "Pika", user: meryl, species: pikachu)
 pika.save
 
-meww = Pokemon.create(nickname: "Mew", user: samcat)
 mew = Species.find_by(name: "Mew")
-meww.species = mew
+meww = Pokemon.create(nickname: "Mew", user: samcat, species: mew)
 meww.save
 
-clone = Pokemon.create(nickname: "Clone", user: samcat)
 mewtwo = Species.find_by(name: "Mewtwo")
-clone.species = mewtwo
+clone = Pokemon.create(nickname: "Clone", user: samcat, species: mewtwo)
 clone.save
 
-streep = Pokemon.create(nickname: "Streep", user: meryl)
 chikorita = Species.find_by(name: "Chikorita")
-streep.species = chikorita
+streep = Pokemon.create(nickname: "Streep", user: meryl, species: chikorita)
 streep.save
 
 libris.save

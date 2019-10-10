@@ -1,9 +1,9 @@
-<h1><%= @pokemon.species %></h1>
+<h1><%= @pokemon.species.name %></h1>
 <% if @pokemon.nickname != nil && @pokemon.nickname != "" && @pokemon.nickname != " "%>
 <h2>"<%= @pokemon.nickname %>"</h2>
 <% end %>
-<p>Number: <%= @pokemon.number %></p>
-<p>Type: <%= @pokemon.pokemon_type %></p>
+<p>Number: <%= @pokemon.species.number %></p>
+<p>Type: <%= @pokemon.species.pokemon_type %></p>
 <p>Trainer: <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
 <a href="/pokemon/<%= @pokemon.id %>/edit">Edit</a>
 <form method="POST" action="/pokemon/<%= @pokemon.id %>">

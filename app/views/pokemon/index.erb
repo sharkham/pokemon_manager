@@ -5,6 +5,6 @@
 <h1>Pokémon</h1>
 <h2>Look at other trainer's Pokémon!</h2>
 <% @pokemon.each do |p| %>
-  <a href="/pokemon/<%= p.id %>"><%= p.species %></a>
+  <a href="/pokemon/<%= p.id %>"><%= p.species.name %></a>
   <br><br>
 <% end %>
