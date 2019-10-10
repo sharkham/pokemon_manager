@@ -2,6 +2,6 @@ class Pokemon < ActiveRecord::Base
   belongs_to :user
   belongs_to :species
 
-  validates :species, presence: true
+  # validates :nic, presence: true
   # self.table_name = "pokemon"
 end

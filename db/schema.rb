@@ -14,13 +14,10 @@
 ActiveRecord::Schema.define(version: 20191008213920) do
 
   create_table "pokemon", force: :cascade do |t|
-    t.string   "species"
-    t.string   "nickname"
-    t.string   "pokemon_type"
-    t.integer  "number"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "nickname"
+    t.text    "notes"
+    t.integer "user_id"
+    t.integer "species_id"
   end
 
   create_table "species", force: :cascade do |t|

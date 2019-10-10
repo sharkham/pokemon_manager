@@ -7,18 +7,18 @@
 # Pet.create(name: "Nona", owner: sophie)
 libris = User.create(username: "libris", email: "libris@umbreon.com", password: "libris")
 meryl = User.create(username: "Meryl", email: "meryl@totodile.com", password: "meryl")
-chewie = User.create(username: "Chewbacca", email: "chewbacca@falcon.com", password: "chewie")
+samcat = User.create(username: "Samcat", email: "samcat@meow.com", password: "samcat")
 
-Pokemon.create(species: "Bulbasaur", nickname: "Bulby", pokemon_type: "Grass - Poison", number: 1, user: libris)
-Pokemon.create(species: "Ivysaur", nickname: "Ivy", pokemon_type: "Grass - Poison", number: 2, user: libris)
-Pokemon.create(species: "Pikachu", nickname: "Pika", pokemon_type: "Electric", number: 25, user: meryl)
-Pokemon.create(species: "Mew", nickname: nil, pokemon_type: "Psychic", number: 151, user: meryl)
-Pokemon.create(species: "Mewtwo", nickname: "Clone", pokemon_type: "Psychic", number: 150, user: chewie)
-Pokemon.create(species: "Chikorita", nickname: "Streep", pokemon_type: "Grass", number: 152, user: meryl)
+# Pokemon.create(nickname: "Bulby", user: libris)
+# Pokemon.create(nickname: "Ivy", user: libris)
+# Pokemon.create(nickname: "Pika", user: meryl)
+# Pokemon.create(nickname: "Mew", user: meryl)
+# Pokemon.create(nickname: "Clone", user: chewie)
+# Pokemon.create(nickname: "Streep", user: meryl)
 
-libris.save!
-meryl.save!
-chewie.save!
+# libris.save
+# meryl.save
+# chewie.save
 
 ###
 
@@ -45,3 +45,38 @@ Species.all.each_with_index do |species, index|
   #   sleep 20
   # end
 end
+
+
+bulby = Pokemon.create(nickname: "Bulby", user: libris)
+bulbasaur = Species.find_by(name: "Bulbasaur")
+bulby.species = bulbasaur
+bulby.save
+
+ivy = Pokemon.create(nickname: "Ivy", user: libris)
+ivysaur = Species.find_by(name: "Ivysaur")
+ivy.species = ivysaur
+ivy.save
+
+pika = Pokemon.create(nickname: "Pika", user: meryl)
+pikachu = Species.find_by(name: "Pikachu")
+pika.species = pikachu
+pika.save
+
+meww = Pokemon.create(nickname: "Mew", user: samcat)
+mew = Species.find_by(name: "Mew")
+meww.species = mew
+meww.save
+
+clone = Pokemon.create(nickname: "Clone", user: samcat)
+mewtwo = Species.find_by(name: "Mewtwo")
+clone.species = mewtwo
+clone.save
+
+streep = Pokemon.create(nickname: "Streep", user: meryl)
+chikorita = Species.find_by(name: "Chikorita")
+streep.species = chikorita
+streep.save
+
+libris.save
+meryl.save
+samcat.save

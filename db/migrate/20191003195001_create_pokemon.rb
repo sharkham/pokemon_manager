@@ -1,12 +1,10 @@
 class CreatePokemon < ActiveRecord::Migration
   def change
     create_table :pokemon do |t|
-      t.string :species
       t.string :nickname
-      t.string :pokemon_type
-      t.integer :number
+      t.text :notes
       t.integer :user_id
-      t.timestamps
+      t.integer :species_id
     end
   end
 end
