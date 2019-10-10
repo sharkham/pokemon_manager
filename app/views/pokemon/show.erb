@@ -1,7 +1,9 @@
+<div class="page_header">
 <h1><%= @pokemon.species.name %></h1>
 <% if @pokemon.nickname != nil && @pokemon.nickname != "" && @pokemon.nickname != " "%>
 <h2>"<%= @pokemon.nickname %>"</h2>
 <% end %>
+</div>
 <p><strong>Number:</strong> <%= @pokemon.species.number %></p>
 <p><strong>Type:</strong> <%= @pokemon.species.pokemon_type %></p>
 <% if @pokemon.notes %>

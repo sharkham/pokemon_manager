@@ -2,8 +2,10 @@
     <h3 style="color: red;"><%= flash[:err] %></h3>
 <% end %>
 
+<div class="page_header">
 <h1>Pokémon</h1>
 <h2>Look at other trainer's Pokémon!</h2>
+</div>
 <% @pokemon.each do |p| %>
   <a href="/pokemon/<%= p.id %>"><%= p.species.name %></a>
   <br><br>
