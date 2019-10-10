@@ -8,8 +8,9 @@ Pokémon App
 [] find a new h2 for Pokémon index
 [] make it pretty
   [x] add a logo
-[] add login error handling
-[] make it so usernames aren't case sensitive
+[x] add login error handling
+[x] make it so usernames aren't case sensitive for uniqueness
+[] BONUS: make it so usernames aren't case sensitive for login
 [] add logo (but smaller) to all pages
 [] record website demo
 [] check off checklist stuff

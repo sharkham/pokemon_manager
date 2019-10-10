@@ -42,8 +42,8 @@ class UserController < ApplicationController
       session[:user_id] = user.id
       redirect "/"
     else
-      flash[:err] = "Please try again."
-      redirect "/login" #fix later to give error message
+      flash[:err] = "Please try again. Note that usernames are case sensitive."
+      redirect "/login"
     end
   end
 
