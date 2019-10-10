@@ -73,6 +73,10 @@ class PokemonController < ApplicationController
       @pokemon = Pokemon.find_by_id(params[:id])
       params.delete("_method")
       # ^ask what this means
+      species = Species.find_by(name: params[:species])
+      params.delete("species")
+      @pokemon.update(species: species)
+
       if @pokemon.update(params)
         redirect "/pokemon/#{@pokemon.id}"
       else
