@@ -11,8 +11,10 @@
 <% end %>
 <p><strong>Trainer:</strong> <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
 
+<% if @user == @pokemon.user %>
 <a href="/pokemon/<%= @pokemon.id %>/edit" class="myButton">Edit</a>
 <form method="POST" action="/pokemon/<%= @pokemon.id %>">
   <input type="hidden"  name="_method" value="delete" />
   <input type="submit" class="myButton" value="Delete" />
   </form>
+<% end %>
