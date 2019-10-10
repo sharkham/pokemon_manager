@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
 
   has_secure_password
   validates :username, :email, presence: true
+  validates :username, :email, uniqueness: true
+  validates :password, length: { in: 5..20, wrong_length: "Password must be between 5 and 20 characteres." }
 
   def slug
     self.username.gsub(" ", "-").downcase
