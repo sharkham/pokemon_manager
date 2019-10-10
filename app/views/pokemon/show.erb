@@ -9,7 +9,7 @@
 <% if @pokemon.notes %>
 <p><strong>Notes:</strong> <%= @pokemon.notes %></p>
 <% end %>
-<p><strong>Trainer:</strong> <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
+<p><strong>Trainer:</strong> <a href="/user/<%= @pokemon.user.slug %>"><%= @pokemon.user.username %></a></p>
 
 <% if @user == @pokemon.user %>
 <a href="/pokemon/<%= @pokemon.id %>/edit" class="myButton">Edit</a>

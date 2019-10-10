@@ -64,8 +64,9 @@ class UserController < ApplicationController
 
   get '/user/:slug' do
     if logged_in?
-      @user = User.find_by_slug(params[:slug])
-      @pokemon = @user.pokemon
+      @user = current_user
+      @trainer = User.find_by_slug(params[:slug])
+      @pokemon = @trainer.pokemon
       erb :'users/show'
     else
       redirect '/login'
