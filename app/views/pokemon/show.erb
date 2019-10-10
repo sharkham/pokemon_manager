@@ -2,14 +2,15 @@
 <% if @pokemon.nickname != nil && @pokemon.nickname != "" && @pokemon.nickname != " "%>
 <h2>"<%= @pokemon.nickname %>"</h2>
 <% end %>
-<p>Number: <%= @pokemon.species.number %></p>
-<p>Type: <%= @pokemon.species.pokemon_type %></p>
+<p><strong>Number:</strong> <%= @pokemon.species.number %></p>
+<p><strong>Type:</strong> <%= @pokemon.species.pokemon_type %></p>
 <% if @pokemon.notes %>
-<p>Notes: <%= @pokemon.notes %></p>
+<p><strong>Notes:</strong> <%= @pokemon.notes %></p>
 <% end %>
-<p>Trainer: <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
-<a href="/pokemon/<%= @pokemon.id %>/edit">Edit</a>
+<p><strong>Trainer:</strong> <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
+
+<a href="/pokemon/<%= @pokemon.id %>/edit" class="myButton">Edit</a>
 <form method="POST" action="/pokemon/<%= @pokemon.id %>">
   <input type="hidden"  name="_method" value="delete" />
-  <input type="submit" value="Delete" />
+  <input type="submit" class="myButton" value="Delete" />
   </form>
