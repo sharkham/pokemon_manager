@@ -42,7 +42,6 @@ class PokemonController < ApplicationController
       @pokemon = Pokemon.find_by_id(params[:id])
       if @pokemon
         @user = current_user
-        @size = "small"
         erb :'pokemon/show'
       else
         redirect '/pokemon'
