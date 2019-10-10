@@ -7,7 +7,14 @@ Pokémon App
 [] there is currently a line break only after h2 and I need it even if there's no h2
 [] find a new h2 for Pokémon index
 [] make it pretty
+  [x] add a logo
+[] add login error handling
+[] make it so usernames aren't case sensitive
+[] add logo (but smaller) to all pages
+[] record website demo
+[] check off checklist stuff
+[] make a gitignore file so this stuff isn't being pushed up to github
 
-- should logged in users be able to view Pokémon?
-- need to lock numbers and types into species
-- might need a "pokemon species" table to let people select from to make this work better
+[x] should logged in users be able to view other users' Pokémon? (yes)
+[x] need to lock numbers and types into species
+[x] might need a "pokemon species" table to let people select from to make this work better

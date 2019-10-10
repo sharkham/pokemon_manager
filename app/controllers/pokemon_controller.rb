@@ -72,7 +72,6 @@ class PokemonController < ApplicationController
     if pokemon_user.id == current_user.id
       @pokemon = Pokemon.find_by_id(params[:id])
       params.delete("_method")
-      # ^ask what this means
       species = Species.find_by(name: params[:species])
       params.delete("species")
       @pokemon.update(species: species)
