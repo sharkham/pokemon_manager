@@ -18,6 +18,8 @@ class UserController < ApplicationController
       redirect '/'
 
     else
+      flash[:err] = "Please try again."
+
       redirect "/signup"
       #one example redirects to failure; it would be better to go to sign-up again but with an error
     end
@@ -38,9 +40,9 @@ class UserController < ApplicationController
     user = User.find_by(:username => params[:username])
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect "/" #fix this later to redirect to Pokémon
-      #currently works
+      redirect "/"
     else
+      flash[:err] = "Please try again."
       redirect "/login" #fix later to give error message
     end
   end
