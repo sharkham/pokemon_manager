@@ -4,6 +4,9 @@
 <% end %>
 <p>Number: <%= @pokemon.species.number %></p>
 <p>Type: <%= @pokemon.species.pokemon_type %></p>
+<% if @pokemon.notes %>
+<p>Notes: <%= @pokemon.notes %></p>
+<% end %>
 <p>Trainer: <a href="/user/<%= @pokemon.user.username %>"><%= @pokemon.user.username %></a></p>
 <a href="/pokemon/<%= @pokemon.id %>/edit">Edit</a>
 <form method="POST" action="/pokemon/<%= @pokemon.id %>">
