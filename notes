@@ -1,22 +1,25 @@
 Pokémon App
+
+[] publish blog post
+[] write README
+[] record website demo
+[] check off checklist stuff
+
 [X] need different view for a user's Pokémon that is user/something and goes in user controller
 [X] need error handling
 [X] add all the links
 [X] blog post draft
-[] publish blog post
 [x] there is currently a line break only after h2 and I need it even if there's no h2
 [x] find a new h2 for Pokémon index
-[] write README
 [] make a back button from Pokémon
-[] make a link to users beside Pokémon on index page
+[x] make a link to users beside Pokémon on index page
   [x] add a logo
 [x] add login error handling
 [x] make it so usernames aren't case sensitive for uniqueness
 [] BONUS: make it so usernames aren't case sensitive for login
-[] add logo (but smaller) to all pages
-[] record website demo
-[] check off checklist stuff
+[x] add logo (but smaller) to all pages
 [] make a gitignore file so this stuff isn't being pushed up to github
+
 
 [x] should logged in users be able to view other users' Pokémon? (yes)
 [x] need to lock numbers and types into species
