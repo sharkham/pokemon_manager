@@ -2,6 +2,6 @@
 <h1><%= @trainer.username %></h1>
 </div>
 <% @pokemon.each do |p| %>
-  <a href="/pokemon/<%= p.id %>"><%= p.species.name %></a>
+  <a href="/pokemon/<%= p.id %>"><strong><%= p.species.name %></strong></a>
   <br><br>
 <% end %>
