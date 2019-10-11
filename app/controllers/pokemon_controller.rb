@@ -59,7 +59,6 @@ class PokemonController < ApplicationController
       @user = current_user
       pokemon_user = Pokemon.find_by_id(params[:id]).user
       if pokemon_user.id == @user.id
-        # @size = "small"
         @pokemon = Pokemon.find_by_id(params[:id])
         erb :'pokemon/edit'
       else

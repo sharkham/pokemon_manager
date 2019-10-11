@@ -7,7 +7,8 @@ Pokémon App
 [x] there is currently a line break only after h2 and I need it even if there's no h2
 [x] find a new h2 for Pokémon index
 [] write README
-[] make it pretty
+[] make a back button from Pokémon
+[] make a link to users beside Pokémon on index page
   [x] add a logo
 [x] add login error handling
 [x] make it so usernames aren't case sensitive for uniqueness
