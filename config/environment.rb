@@ -10,6 +10,9 @@ ActiveRecord::Base.establish_connection(
   :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
 )
 
+require 'dotenv'
+Dotenv.load
+
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.uncountable %w( pokemon )
   # inflect.uncountable [pokemon]

@@ -13,6 +13,7 @@ gem 'bcrypt'
 gem 'rack-flash3'
 gem 'tux'
 gem 'nokogiri'
+gem 'dotenv'
 
 group :test do
   gem 'rspec'
