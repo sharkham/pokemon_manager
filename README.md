@@ -13,7 +13,15 @@ Pokémon Manager is a Sinatra-based web application for keeping track of your Po
 
 ## Usage
 
-After following the installation instructions, type `shotgun` (while still in the `pokemon_manager` directory) to start the server.
+After following the installation instructions, enable sessions by creating a `.gitignore` file and an `.env` file in the root directory. This can be done by typing `touch .gitignore` then `touch .env` in the terminal.
+
+In `.gitignore`, add `.env`.
+
+In `.env` add the following code, replacing `test string` with a secret word or string.
+
+`SECRET_SESSION_KEY="test string"`
+
+After this, type `shotgun` (while still in the `pokemon_manager` directory) to start the server.
 
 This web app supports the sign-up, logging in and logging out of users, and creating, reading, editing and deleting Pokémon.
 
