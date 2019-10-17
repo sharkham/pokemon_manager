@@ -13,7 +13,7 @@ class UserController < ApplicationController
   post "/signup" do
     @user = User.new(:username => params[:username], :email => params[:email], :password => params[:password])
     if @user.save
-      session[:user_id] = @user.id #works
+      session[:user_id] = @user.id
 
       redirect '/'
 
@@ -21,7 +21,6 @@ class UserController < ApplicationController
       flash[:err] = "Please try again."
 
       redirect "/signup"
-      #one example redirects to failure; it would be better to go to sign-up again but with an error
     end
   end
 

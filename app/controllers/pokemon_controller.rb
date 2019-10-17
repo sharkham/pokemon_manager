@@ -38,7 +38,6 @@ class PokemonController < ApplicationController
   #Read - Individual Pokémon (show)
   get '/pokemon/:id' do
     if logged_in?
-      # @size = "small"
       @pokemon = Pokemon.find_by_id(params[:id])
       if @pokemon
         @user = current_user
@@ -55,7 +54,6 @@ class PokemonController < ApplicationController
   #Edit
   get '/pokemon/:id/edit' do
     if logged_in?
-      # @size = "small"
       @user = current_user
       pokemon_user = Pokemon.find_by_id(params[:id]).user
       if pokemon_user.id == @user.id
